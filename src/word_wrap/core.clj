@@ -2,7 +2,7 @@
 
 (defn to-string [lazycoll] (apply str lazycoll))
 
-;[maxlength [head & tail :as acc] x]
+;[maxlength [(head x) & tail :as acc] x]
 
 (defn my-concat
   [maxlength acc x]
