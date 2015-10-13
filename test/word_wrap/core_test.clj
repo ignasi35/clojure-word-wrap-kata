@@ -4,18 +4,20 @@
 
 (deftest a-test
 
-  (testing "Word wrapping  when input is shorter than line maxlength is identity"
+  (testing "Word wrapping when input is shorter than line maxlength is identity"
     (is (=
           "hello"
           (wrap "hello" 100)
-           ))
+          ))
     )
+  )
 
-  (testing "Word wrapping naive ignores white space"
+(deftest b-test
+  (testing "Word wrapping considers white space"
     (is (=
-          "hell\no wo\nrld"
-          (wrap "hello world" 4)
-           ))
+          "hello\nworld"
+          (wrap "hello world" 5)
+          ))
     )
 
   )
