@@ -3,8 +3,18 @@
             [word-wrap.core :refer :all]))
 
 (deftest a-test
-  (testing "FIXME, I fail."
+
+  (testing "Word wrapping wrapper wrap"
     (is (=
           "hello"
-          (wrap "hello")
-           ))))
+          (wrap "hello" 100)
+           ))
+    )
+
+  (testing "Word wrapping wrapper wrap"
+    (is (=
+          "hell\no wo\nrld"
+          (wrap "hello world" 4)
+           ))
+    )
+)
